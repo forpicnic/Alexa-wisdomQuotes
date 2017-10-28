@@ -79,10 +79,15 @@ def welldone():
     welldone_msg = 'Thank you. Your encouragement is my best motive to improve.'
     return question(welldone_msg)
 
+@ask.intent('ThankyouIntent')
+def thankyou():
+    thankyou_msg = 'You are welcome. Would you like one more quote?'
+    return question(thankyou_msg)
+
+
 @ask.intent("ForgotIntent")
 def forgot():
     return question('Sorry, I forgot what it was. Could you tell me what kind of quotes would you like to listen? I will give you a new one.')
-
 
 @ask.intent('AMAZON.HelpIntent')
 def help():
